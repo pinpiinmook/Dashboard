@@ -1,7 +1,7 @@
 // All javascript code in this project for now is just for demo DON'T RELY ON IT
 
-const random = (max = 100) => {
-  return Math.round(Math.random() * max) + 20
+const random = (max = 10000) => {
+  return Math.round(Math.random() * max) + 1000
 }
 
 const randomData = () => {
@@ -18,10 +18,20 @@ const randomData = () => {
     random(),
     random(),
     random(),
+    random(),
+    random(),
+    random(),
+    random(),
+    random(),
+    random(),
+    random(),
+    random(),
   ]
 }
 
-const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+// const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+const totalExpenses = Array.from({ length: 17 }, (_, index) => (index + 2 !== 15) ? `Total Expenses ${index + 2}` : null).filter(Boolean);
+
 
 const cssColors = (color) => {
   return getComputedStyle(document.documentElement).getPropertyValue(color)
@@ -42,7 +52,7 @@ const colors = {
 const barChart = new Chart(document.getElementById('barChart'), {
   type: 'bar',
   data: {
-    labels: months,
+    labels: totalExpenses,
     datasets: [
       {
         data: randomData(),
@@ -91,7 +101,7 @@ const barChart = new Chart(document.getElementById('barChart'), {
 const doughnutChart = new Chart(document.getElementById('doughnutChart'), {
   type: 'doughnut',
   data: {
-    labels: ['Oct', 'Nov', 'Dec'],
+    labels: ['รายได้', 'รายจ่าย', 'กำไร'],
     datasets: [
       {
         data: [random(), random(), random()],
@@ -119,61 +129,61 @@ const doughnutChart = new Chart(document.getElementById('doughnutChart'), {
   },
 })
 
-const activeUsersChart = new Chart(document.getElementById('activeUsersChart'), {
-  type: 'bar',
-  data: {
-    labels: [...randomData(), ...randomData()],
-    datasets: [
-      {
-        data: [...randomData(), ...randomData()],
-        backgroundColor: colors.primary,
-        borderWidth: 0,
-        categoryPercentage: 1,
-      },
-    ],
-  },
-  options: {
-    scales: {
-      yAxes: [
-        {
-          display: false,
-          gridLines: false,
-        },
-      ],
-      xAxes: [
-        {
-          display: false,
-          gridLines: false,
-        },
-      ],
-      ticks: {
-        padding: 10,
-      },
-    },
-    cornerRadius: 2,
-    maintainAspectRatio: false,
-    legend: {
-      display: false,
-    },
-    tooltips: {
-      prefix: 'Users',
-      bodySpacing: 4,
-      footerSpacing: 4,
-      hasIndicator: true,
-      mode: 'index',
-      intersect: true,
-    },
-    hover: {
-      mode: 'nearest',
-      intersect: true,
-    },
-  },
-})
+// const activeUsersChart = new Chart(document.getElementById('activeUsersChart'), {
+//   type: 'bar',
+//   data: {
+//     labels: [...randomData(), ...randomData()],
+//     datasets: [
+//       {
+//         data: [...randomData(), ...randomData()],
+//         backgroundColor: colors.primary,
+//         borderWidth: 0,
+//         categoryPercentage: 1,
+//       },
+//     ],
+//   },
+//   options: {
+//     scales: {
+//       yAxes: [
+//         {
+//           display: false,
+//           gridLines: false,
+//         },
+//       ],
+//       xAxes: [
+//         {
+//           display: false,
+//           gridLines: false,
+//         },
+//       ],
+//       ticks: {
+//         padding: 10,
+//       },
+//     },
+//     cornerRadius: 2,
+//     maintainAspectRatio: false,
+//     legend: {
+//       display: false,
+//     },
+//     tooltips: {
+//       prefix: 'Users',
+//       bodySpacing: 4,
+//       footerSpacing: 4,
+//       hasIndicator: true,
+//       mode: 'index',
+//       intersect: true,
+//     },
+//     hover: {
+//       mode: 'nearest',
+//       intersect: true,
+//     },
+//   },
+// })
 
 const lineChart = new Chart(document.getElementById('lineChart'), {
   type: 'line',
   data: {
-    labels: months,
+    labels: totalExpenses,
     datasets: [
       {
         data: randomData(),
@@ -218,18 +228,18 @@ const lineChart = new Chart(document.getElementById('lineChart'), {
   },
 })
 
-let randomUserCount = 0
+// let randomUserCount = 0
 
-const usersCount = document.getElementById('usersCount')
+// const usersCount = document.getElementById('usersCount')
 
-const fakeUsersCount = () => {
-  randomUserCount = random()
-  activeUsersChart.data.datasets[0].data.push(randomUserCount)
-  activeUsersChart.data.datasets[0].data.splice(0, 1)
-  activeUsersChart.update()
-  usersCount.innerText = randomUserCount
-}
+// const fakeUsersCount = () => {
+//   randomUserCount = random()
+//   activeUsersChart.data.datasets[0].data.push(randomUserCount)
+//   activeUsersChart.data.datasets[0].data.splice(0, 1)
+//   activeUsersChart.update()
+//   usersCount.innerText = randomUserCount
+// }
 
-setInterval(() => {
-  fakeUsersCount()
-}, 1000)
+// setInterval(() => {
+//   fakeUsersCount()
+// }, 1000)

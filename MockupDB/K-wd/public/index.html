@@ -42,7 +42,7 @@
                 >
                   <span aria-hidden="true">
                     <svg
-                      class="w-5 h-5"
+                      class="h-5 w-5"
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
                       viewBox="0 0 24 24"
@@ -52,11 +52,11 @@
                         stroke-linecap="round"
                         stroke-linejoin="round"
                         stroke-width="2"
-                        d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+                        d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z"
                       />
                     </svg>
                   </span>
-                  <span class="ml-2 text-sm"> Dashboards </span>
+                  <span class="ml-2 text-sm"> Dashboard </span>
                   <span class="ml-auto" aria-hidden="true">
                     <!-- active class 'rotate-180' -->
                     <svg
@@ -64,8 +64,8 @@
                       :class="{ 'rotate-180': open }"
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
+                      viewBox="none"
+                      stroke="none"
                     >
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                     </svg>
@@ -499,7 +499,7 @@
                 href="index.html"
                 class="inline-block text-2xl font-bold tracking-wider uppercase text-primary-dark dark:text-light"
               >
-                Total expenses
+                Total expenses Prediction
               </a>
 
               <!-- Mobile sub menu button -->
@@ -571,7 +571,7 @@
                 </button>
 
                 <!-- Notification button -->
-                <button
+                <!-- <button
                   @click="openNotificationsPanel"
                   class="p-2 transition-colors duration-200 rounded-full text-primary-lighter bg-primary-50 hover:text-primary hover:bg-primary-100 dark:hover:text-light dark:hover:bg-primary-dark dark:bg-dark focus:outline-none focus:bg-primary-100 dark:focus:bg-primary-dark focus:ring-primary-darker"
                 >
@@ -591,10 +591,10 @@
                       d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
                     />
                   </svg>
-                </button>
+                </button> -->
 
                 <!-- Search button -->
-                <button
+                <!-- <button
                   @click="openSearchPanel"
                   class="p-2 transition-colors duration-200 rounded-full text-primary-lighter bg-primary-50 hover:text-primary hover:bg-primary-100 dark:hover:text-light dark:hover:bg-primary-dark dark:bg-dark focus:outline-none focus:bg-primary-100 dark:focus:bg-primary-dark focus:ring-primary-darker"
                 >
@@ -614,7 +614,7 @@
                       d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
                     />
                   </svg>
-                </button>
+                </button> -->
 
                 <!-- Settings button -->
                 <button
@@ -655,7 +655,7 @@
                     class="transition-opacity duration-200 rounded-full dark:opacity-75 dark:hover:opacity-100 focus:outline-none focus:ring dark:focus:opacity-100"
                   >
                     <span class="sr-only">User menu</span>
-                    <img class="w-10 h-10 rounded-full" src="build/images/avatar.jpg" alt="Ahmed Kamel" />
+                    <img class="w-10 h-10 rounded-full" src="build/images/user.png" alt="Admin" />
                   </button>
 
                   <!-- User dropdown menu -->
@@ -842,7 +842,7 @@
                     class="block transition-opacity duration-200 rounded-full dark:opacity-75 dark:hover:opacity-100 focus:outline-none focus:ring dark:focus:opacity-100"
                   >
                     <span class="sr-only">User menu</span>
-                    <img class="w-10 h-10 rounded-full" src="build/images/avatar.jpg" alt="Ahmed Kamel" />
+                    <img class="w-10 h-10 rounded-full" src="build/images/user.png" alt="Admin" />
                   </button>
 
                   <!-- User dropdown menu -->
@@ -938,7 +938,7 @@
                   <div role="menu" x-show="open" class="mt-2 space-y-2 px-7" aria-label="Dashboards">
                     <!-- active & hover classes 'text-gray-700 dark:text-light' -->
                     <!-- inActive classes 'text-gray-400 dark:text-gray-400' -->
-                    <a
+                    <!-- <a
                       href="index.html"
                       role="menuitem"
                       class="block p-2 text-sm text-gray-700 transition-colors duration-200 rounded-md dark:text-light dark:hover:text-light hover:text-gray-700"
@@ -960,12 +960,12 @@
                       E-Commerce (soon)
                     </a>
                   </div>
-                </div>
+                </div> -->
 
                 <!-- Components links -->
-                <div x-data="{ isActive: false, open: false }">
+                <!-- <div x-data="{ isActive: false, open: false }"> -->
                   <!-- active classes 'bg-primary-100 dark:bg-primary' -->
-                  <a
+                  <!-- <a
                     href="#"
                     @click="$event.preventDefault(); open = !open"
                     class="flex items-center p-2 text-gray-500 transition-colors rounded-md dark:text-light hover:bg-primary-100 dark:hover:bg-primary"
@@ -991,9 +991,9 @@
                       </svg>
                     </span>
                     <span class="ml-2 text-sm"> Components </span>
-                    <span aria-hidden="true" class="ml-auto">
+                    <span aria-hidden="true" class="ml-auto"> -->
                       <!-- active class 'rotate-180' -->
-                      <svg
+                      <!-- <svg
                         class="w-4 h-4 transition-transform transform"
                         :class="{ 'rotate-180': open }"
                         xmlns="http://www.w3.org/2000/svg"
@@ -1005,10 +1005,10 @@
                       </svg>
                     </span>
                   </a>
-                  <div x-show="open" class="mt-2 space-y-2 px-7" role="menu" arial-label="Components">
+                  <div x-show="open" class="mt-2 space-y-2 px-7" role="menu" arial-label="Components"> -->
                     <!-- active & hover classes 'text-gray-700 dark:text-light' -->
                     <!-- inActive classes 'text-gray-400 dark:text-gray-400' -->
-                    <a
+                    <!-- <a
                       href="#"
                       role="menuitem"
                       class="block p-2 text-sm text-gray-400 transition-colors duration-200 rounded-md dark:text-gray-400 dark:hover:text-light hover:text-gray-700"
@@ -1058,10 +1058,10 @@
                       Modals (soon)
                     </a>
                   </div>
-                </div>
+                </div> -->
 
                 <!-- Pages links -->
-                <div x-data="{ isActive: false, open: false }">
+                <!-- <div x-data="{ isActive: false, open: false }"> -->
                   <!-- active classes 'bg-primary-100 dark:bg-primary' -->
                   <a
                     href="#"
@@ -1159,7 +1159,7 @@
                 </div>
 
                 <!-- Authentication links -->
-                <div x-data="{ isActive: false, open: false}">
+                <!-- <div x-data="{ isActive: false, open: false}"> -->
                   <!-- active & hover classes 'bg-primary-100 dark:bg-primary' -->
                   <a
                     href="#"
@@ -1313,28 +1313,28 @@
             <!-- Content header -->
             <div class="flex items-center justify-between px-4 py-4 border-b lg:py-6 dark:border-primary-darker">
               <h1 class="text-2xl font-semibold">Dashboard</h1>
-              <a
+              <!-- <a
                 href="https://github.com/Kamona-WD/kwd-dashboard"
                 target="_blank"
                 class="px-4 py-2 text-sm text-white rounded-md bg-primary hover:bg-primary-dark focus:outline-none focus:ring focus:ring-primary focus:ring-offset-1 focus:ring-offset-white dark:focus:ring-offset-dark"
-              >
-                View on github
-              </a>
+              > -->
+                <!-- View on github -->
+              <!-- </a> -->
             </div>
 
             <!-- Content -->
             <div class="mt-2">
               <!-- State cards -->
               <div class="grid grid-cols-1 gap-8 p-4 lg:grid-cols-2 xl:grid-cols-4">
-                <!-- Value card -->
+                <!-- Total income card -->
                 <div class="flex items-center justify-between p-4 bg-white rounded-md dark:bg-darker">
                   <div>
                     <h6
                       class="text-xs font-medium leading-none tracking-wider text-gray-500 uppercase dark:text-primary-light"
                     >
-                      Value
+                      รายได้รวม
                     </h6>
-                    <span class="text-xl font-semibold">$30,000</span>
+                    <span class="text-xl font-semibold">฿123,500</span>
                     <span class="inline-block px-2 py-px ml-2 text-xs text-green-500 bg-green-100 rounded-md">
                       +4.4%
                     </span>
@@ -1359,15 +1359,15 @@
                   </div>
                 </div>
 
-                <!-- Users card -->
+                <!-- Total expenses card -->
                 <div class="flex items-center justify-between p-4 bg-white rounded-md dark:bg-darker">
                   <div>
                     <h6
                       class="text-xs font-medium leading-none tracking-wider text-gray-500 uppercase dark:text-primary-light"
                     >
-                      Users
+                      รายจ่ายรวม
                     </h6>
-                    <span class="text-xl font-semibold">50,021</span>
+                    <span class="text-xl font-semibold">฿50,021</span>
                     <span class="inline-block px-2 py-px ml-2 text-xs text-green-500 bg-green-100 rounded-md">
                       +2.6%
                     </span>
@@ -1385,22 +1385,22 @@
                           stroke-linecap="round"
                           stroke-linejoin="round"
                           stroke-width="2"
-                          d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"
+                          d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"
                         />
                       </svg>
                     </span>
                   </div>
                 </div>
 
-                <!-- Orders card -->
+                <!-- Profit card -->
                 <div class="flex items-center justify-between p-4 bg-white rounded-md dark:bg-darker">
                   <div>
                     <h6
                       class="text-xs font-medium leading-none tracking-wider text-gray-500 uppercase dark:text-primary-light"
                     >
-                      Orders
+                      กำไร
                     </h6>
-                    <span class="text-xl font-semibold">45,021</span>
+                    <span class="text-xl font-semibold">฿73,479</span>
                     <span class="inline-block px-2 py-px ml-2 text-xs text-green-500 bg-green-100 rounded-md">
                       +3.1%
                     </span>
@@ -1425,17 +1425,17 @@
                   </div>
                 </div>
 
-                <!-- Tickets card -->
+                <!-- lose card -->
                 <div class="flex items-center justify-between p-4 bg-white rounded-md dark:bg-darker">
                   <div>
                     <h6
                       class="text-xs font-medium leading-none tracking-wider text-gray-500 uppercase dark:text-primary-light"
                     >
-                      Tickets
+                      ขาดทุน
                     </h6>
-                    <span class="text-xl font-semibold">20,516</span>
+                    <span class="text-xl font-semibold">-</span>
                     <span class="inline-block px-2 py-px ml-2 text-xs text-green-500 bg-green-100 rounded-md">
-                      +3.1%
+                      00.00%
                     </span>
                   </div>
                   <div>
@@ -1451,7 +1451,7 @@
                           stroke-linecap="round"
                           stroke-linejoin="round"
                           stroke-width="2"
-                          d="M15 5v2m0 4v2m0 4v2M5 5a2 2 0 00-2 2v3a2 2 0 110 4v3a2 2 0 002 2h14a2 2 0 002-2v-3a2 2 0 110-4V7a2 2 0 00-2-2H5z"
+                          d="M13 17h8m0 0V9m0 8l-8-8-4 4-6-6"
                         />
                       </svg>
                     </span>
@@ -1465,9 +1465,9 @@
                 <div class="col-span-2 bg-white rounded-md dark:bg-darker" x-data="{ isOn: false }">
                   <!-- Card header -->
                   <div class="flex items-center justify-between p-4 border-b dark:border-primary">
-                    <h4 class="text-lg font-semibold text-gray-500 dark:text-light">Bar Chart</h4>
+                    <h4 class="text-lg font-normal text-gray-500 dark:text-light">เปรียบเทียบ ค่าทำนาย/ค่าจริง</h4>
                     <div class="flex items-center space-x-2">
-                      <span class="text-sm text-gray-500 dark:text-light">Last year</span>
+                      <span class="text-sm text-gray-500 dark:text-light">ค่าจริง</span>
                       <button
                         class="relative focus:outline-none"
                         x-cloak
@@ -1493,20 +1493,20 @@
                 <div class="bg-white rounded-md dark:bg-darker" x-data="{ isOn: false }">
                   <!-- Card header -->
                   <div class="flex items-center justify-between p-4 border-b dark:border-primary">
-                    <h4 class="text-lg font-semibold text-gray-500 dark:text-light">Doughnut Chart</h4>
+                    <h4 class="text-lg font-medium text-gray-500 dark:text-light">ภาพรวมของรายได้/รายจ่าย การขนส่ง</h4>
                     <div class="flex items-center">
-                      <button
+                      <!-- <button
                         class="relative focus:outline-none"
                         x-cloak
                         @click="isOn = !isOn; $parent.updateDoughnutChart(isOn)"
-                      >
-                        <div
+                      > -->
+                        <!-- <div
                           class="w-12 h-6 transition rounded-full outline-none bg-primary-100 dark:bg-primary-darker"
-                        ></div>
-                        <div
+                        ></div> -->
+                        <!-- <div
                           class="absolute top-0 left-0 inline-flex items-center justify-center w-6 h-6 transition-all duration-200 ease-in-out transform scale-110 rounded-full shadow-sm"
                           :class="{ 'translate-x-0  bg-white dark:bg-primary-100': !isOn, 'translate-x-6 bg-primary-light dark:bg-primary': isOn }"
-                        ></div>
+                        ></div> -->
                       </button>
                     </div>
                   </div>
@@ -1518,28 +1518,28 @@
               </div>
 
               <!-- Two grid columns -->
-              <div class="grid grid-cols-1 p-4 space-y-8 lg:gap-8 lg:space-y-0 lg:grid-cols-3">
+              <!-- <div class="grid grid-cols-1 p-4 space-y-8 lg:gap-8 lg:space-y-0 lg:grid-cols-3"> -->
                 <!-- Active users chart -->
-                <div class="col-span-1 bg-white rounded-md dark:bg-darker">
+                <!-- <div class="col-span-1 bg-white rounded-md dark:bg-darker"> -->
                   <!-- Card header -->
-                  <div class="p-4 border-b dark:border-primary">
+                  <!-- <div class="p-4 border-b dark:border-primary">
                     <h4 class="text-lg font-semibold text-gray-500 dark:text-light">Active users right now</h4>
                   </div>
                   <p class="p-4">
                     <span class="text-2xl font-medium text-gray-500 dark:text-light" id="usersCount">0</span>
                     <span class="text-sm font-medium text-gray-500 dark:text-primary">Users</span>
-                  </p>
+                  </p> -->
                   <!-- Chart -->
-                  <div class="relative p-4">
+                  <!-- <div class="relative p-4">
                     <canvas id="activeUsersChart"></canvas>
-                  </div>
+                  </div> -->
                 </div>
 
                 <!-- Line chart card -->
                 <div class="col-span-2 bg-white rounded-md dark:bg-darker" x-data="{ isOn: false }">
                   <!-- Card header -->
                   <div class="flex items-center justify-between p-4 border-b dark:border-primary">
-                    <h4 class="text-lg font-semibold text-gray-500 dark:text-light">Line Chart</h4>
+                    <h4 class="text-lg font-medium text-gray-500 dark:text-light">การเปรียบเทียบค่าใช้จ่ายตามโมเดล</h4>
                     <div class="flex items-center">
                       <button
                         class="relative focus:outline-none"
@@ -1566,7 +1566,7 @@
           </main>
 
           <!-- Main footer -->
-          <footer
+          <!-- <footer
             class="flex items-center justify-between p-4 bg-white border-t dark:bg-darker dark:border-primary-darker"
           >
             <div>K-WD &copy; 2021</div>
@@ -1577,7 +1577,7 @@
               >
             </div>
           </footer>
-        </div>
+        </div> -->
 
         <!-- Panels -->
 
@@ -1799,7 +1799,7 @@
           </div>
           <div class="flex flex-col h-screen" x-data="{ activeTabe: 'action' }">
             <!-- Panel header -->
-            <div class="flex-shrink-0">
+            <!-- <div class="flex-shrink-0">
               <div class="flex items-center justify-between px-4 pt-4 border-b dark:border-primary-darker">
                 <h2 id="notificationPanelLabel" class="pb-4 font-semibold">Notifications</h2>
                 <div class="space-x-2">
@@ -1819,12 +1819,12 @@
                   </button>
                 </div>
               </div>
-            </div>
+            </div> -->
 
             <!-- Panel content (tabs) -->
-            <div class="flex-1 pt-4 overflow-y-hidden hover:overflow-y-auto">
+            <!-- <div class="flex-1 pt-4 overflow-y-hidden hover:overflow-y-auto"> -->
               <!-- Action tab -->
-              <div class="space-y-4" x-show.transition.in="activeTabe == 'action'">
+              <!-- <div class="space-y-4" x-show.transition.in="activeTabe == 'action'">
                 <a href="#" class="block">
                   <div class="flex px-4 space-x-4">
                     <div class="relative flex-shrink-0">
@@ -1931,17 +1931,17 @@
                     </div>
                   </a>
                 </template>
-              </div>
+              </div> -->
 
               <!-- User tab -->
-              <div class="space-y-4" x-show.transition.in="activeTabe == 'user'">
+              <!-- <div class="space-y-4" x-show.transition.in="activeTabe == 'user'">
                 <a href="#" class="block">
                   <div class="flex px-4 space-x-4">
                     <div class="relative flex-shrink-0">
                       <span class="relative z-10 inline-block overflow-visible rounded-ful">
                         <img
                           class="object-cover rounded-full w-9 h-9"
-                          src="build/images/avatar.jpg"
+                          src="build/images/user.png"
                           alt="Ahmed kamel"
                         />
                       </span>
@@ -1983,8 +1983,8 @@
                       <span class="relative z-10 inline-block overflow-visible rounded-ful">
                         <img
                           class="object-cover rounded-full w-9 h-9"
-                          src="build/images/avatar.jpg"
-                          alt="Ahmed kamel"
+                          src="build/images/user.png"
+                          alt="Admin"
                         />
                       </span>
                       <div class="absolute h-24 p-px -mt-3 -ml-px bg-primary-50 left-1/2 dark:bg-primary-darker"></div>
@@ -2025,7 +2025,7 @@
                 </template>
               </div>
             </div>
-          </div>
+          </div> -->
         </section>
 
         <!-- Search panel -->
